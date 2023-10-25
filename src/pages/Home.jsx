@@ -1,9 +1,9 @@
-import {View, Image, Text} from 'react-native';
+import {ScrollView, View, Image, Text} from 'react-native';
 import React from 'react';
 
 const Home = () => {
   return (
-    <View
+    <ScrollView
       style={{
         backgroundColor: '#D7D1CF',
       }}>
@@ -20,11 +20,13 @@ const Home = () => {
           padding: 16,
           borderRadius: 40,
         }}>
+        {/* logo diatas */}
         <Image
           reziseMode="contain"
           style={{height: 40, width: 150}}
           source={require('../assets/images/logomhss.png')}
         />
+        {/* logo menu */}
         <Image
           reziseMode="contain"
           style={{height: 30, width: 30, margin: 5}}
@@ -66,11 +68,12 @@ const Home = () => {
             padding: 12,
             flex: 1,
           }}>
+          {/* nasipadang */}
           <Image
             reziseMode="contain"
             style={{
-              height: 195,
-              width: 160,
+              height: 190,
+              width: 180,
               marginHorizontal: 16,
               borderRadius: 12,
             }}
@@ -93,7 +96,7 @@ const Home = () => {
               marginHorizontal: 16,
               color: 'red',
             }}>
-            Rp 15.000
+            Rp 12.000
           </Text>
         </View>
 
@@ -105,8 +108,8 @@ const Home = () => {
           <Image
             reziseMode="contain"
             style={{
-              height: 195,
-              width: 160,
+              height: 190,
+              width: 180,
               marginHorizontal: 16,
               borderRadius: 12,
             }}
@@ -132,6 +135,16 @@ const Home = () => {
           </Text>
         </View>
       </View>
+      <Text
+        style={{
+          marginTop: 33,
+          marginHorizontal: 16,
+          fontWeight: 'bold',
+          color: 'black',
+          fontSize: 16,
+        }}>
+        Menu Minuman
+      </Text>
       <View
         style={{
           flexDirection: 'row',
@@ -140,17 +153,16 @@ const Home = () => {
           style={{
             padding: 12,
             flex: 1,
-            borderWidth: 1,
           }}>
           <Image
             reziseMode="contain"
             style={{
-              height: 195,
-              width: 160,
+              height: 190,
+              width: 180,
               marginHorizontal: 16,
               borderRadius: 12,
             }}
-            source={require('../assets/images/naspad.jpg')}
+            source={require('../assets/images/lemontea.jpg')}
           />
           <Text
             style={{
@@ -160,7 +172,7 @@ const Home = () => {
               color: 'black',
               margin: 3,
             }}>
-            Nasi Padang
+            Lemon Tea
           </Text>
           <Text
             style={{
@@ -169,7 +181,7 @@ const Home = () => {
               marginHorizontal: 16,
               color: 'red',
             }}>
-            Rp 15.000
+            Rp 10.000
           </Text>
         </View>
         <View
@@ -180,12 +192,12 @@ const Home = () => {
           <Image
             reziseMode="contain"
             style={{
-              height: 195,
-              width: 160,
+              height: 190,
+              width: 180,
               marginHorizontal: 16,
               borderRadius: 12,
             }}
-            source={require('../assets/images/nasgor.jpg')}
+            source={require('../assets/images/minuman.jpg')}
           />
           <Text
             style={{
@@ -194,7 +206,7 @@ const Home = () => {
               marginHorizontal: 16,
               color: 'black',
             }}>
-            Nasi Goreng Sedap
+            Milk Coffie
           </Text>
           <Text
             style={{
@@ -203,11 +215,11 @@ const Home = () => {
               marginHorizontal: 16,
               color: 'red',
             }}>
-            Rp 15.000
+            Rp 13.000
           </Text>
         </View>
       </View>
-    </View>
+    </ScrollView>
   );
 };
 
