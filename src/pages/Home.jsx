@@ -1,7 +1,7 @@
-import {ScrollView, View, Image, Text} from 'react-native';
+import {ScrollView, View, Image, Text, TouchableOpacity} from 'react-native';
 import React from 'react';
 
-const Home = () => {
+const Home = ({navigation}) => {
   return (
     <ScrollView
       style={{
@@ -57,13 +57,13 @@ const Home = () => {
         }}>
         Menu Makanan
       </Text>
-
       <View
         style={{
           flexDirection: 'row',
         }}>
-        <View
-          style={{
+        <TouchableOpacity
+          onPress={() => navigation.navigate('Detail')}
+           style={{
             paddingTop: 12,
             padding: 12,
             flex: 1,
@@ -98,7 +98,7 @@ const Home = () => {
             }}>
             Rp 12.000
           </Text>
-        </View>
+        </TouchableOpacity>
 
         <View
           style={{
