@@ -1,12 +1,13 @@
-import {View, Text, Image} from 'react-native';
+import {View, Text, Image, TouchableOpacity, TextInput, ScrollView} from 'react-native';
 import React from 'react';
 
-const detail = () => {
+const Detail = ({navigation}) => {
   return (
-    <View
+    <ScrollView
       style={{
         backgroundColor: '#D7D1CF',
       }}>
+        
       <View
         style={{
           flexDirection: 'row',
@@ -18,6 +19,7 @@ const detail = () => {
 
           borderRadius: 30,
         }}>
+          <TouchableOpacity onPress={() => navigation.navigate('Home')}>
         <Image
           style={{
             height: 40,
@@ -27,6 +29,7 @@ const detail = () => {
           }}
           source={require('../assets/images/rename.png')}
         />
+        </TouchableOpacity>
         <View
           style={{
             height: 50,
@@ -70,19 +73,24 @@ const detail = () => {
               fontSize: 18,
               color: 'black',
               marginLeft: 50,
+              marginTop: 12,
+              
             }}>
+              
             Nasi Padang
+          </Text>
+            
             <Text
               style={{
+                fontWeight: 'bold',
+                marginTop: 12,
                 fontSize: 14,
                 color: 'red',
-                marginLeft: 200,
+                marginRight: 50,
               }}>
               Rp 12.000
             </Text>
-          </Text>
         </View>
-        <View></View>
         <Text
           style={{
             fontSize: 14,
@@ -98,25 +106,44 @@ const detail = () => {
           borderWidth: 1,
           height: 50,
           width: 350,
-          borderRadius: 40,
+          borderRadius: 15,
           marginTop: 20,
-          alignItems: 'center',
-          marginHorizontal: 50,
-        }}></View>
+          alignSelf:'center',
+          alignItems:'center'
+        }}>
+          <TextInput style={{
+          }} placeholder='Masukkan Jumlah Pesanan'>
+          
+          </TextInput>
+        </View>
       <View
         style={{
-          flexDirection: 'row',
           justifyContent: 'space-between',
+          alignSelf:'center',
           height: 50,
+          width:350,
           alignItems: 'center',
           backgroundColor: '#898484',
           marginHorizontal: 16,
-          marginTop: 180,
+          marginTop: 50,
           padding: 16,
-          borderRadius: 40,
-        }}></View>
-    </View>
+          borderRadius: 15,
+        }}>
+          <TouchableOpacity onPress={() => navigation.navigate('Succes')} style= {{
+            textAlign:'center',
+            alignSelf:'center',
+            alignItems:'center',
+            alignContent:'center'
+          }}>
+          <Text style={{
+            fontWeight:'bold',
+            textAlign:'center'
+          }}>Konfirmasi Pemesanan</Text>
+          </TouchableOpacity>
+          
+        </View>
+    </ScrollView>
   );
 };
 
-export default detail;
+export default Detail;
