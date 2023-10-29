@@ -16,7 +16,7 @@ const Home = ({navigation}) => {
           alignItems: 'center',
           backgroundColor: '#898484',
           marginHorizontal: 16,
-          marginTop: 16,
+          marginTop: 15,
           padding: 16,
           borderRadius: 40,
         }}>
